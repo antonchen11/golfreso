@@ -122,6 +122,12 @@ func main() {
 		response := fmt.Sprintf("https://secure.west.prophetservices.com/CityofVancouver/Home/nIndex?CourseId=%s&Date=%s&Time=AnyTime&Player=%s&Hole=18", rcourseId, rdate, rplayers)
 
 
+		// FEATURE.... jan 30th after discussions.!
+		// Query a specific time slot until the time is found.
+		// user specifices polling time. Reason being sometimes reserved times are available due to cancellations.
+		// IF FOUND THEN PROCEED LOGGING IN AND BOOK.
+
+
 		// Login to COV Golf reservations
 		fmt.Println("Hit login page")
 		//page := rod.New().MustConnect().MustPage("https://www.wikipedia.org/")
